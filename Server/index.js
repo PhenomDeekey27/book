@@ -10,7 +10,7 @@ const bookSchema = require("./Models/BookSchema")
 const UserSchema=require("./Models/UserSchema")
 
 
-const PORT=  8000;
+const PORT=process.env.PORT || 8000;
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("mongoDb connected Successfully")
